@@ -69,7 +69,7 @@ b=numbers
 del numbers
 print(b)
 
-
+print()
 
 
 
