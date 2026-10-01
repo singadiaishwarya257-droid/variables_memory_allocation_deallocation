@@ -321,4 +321,156 @@ A larger program might follow a flow like:
 
 ```text
 main() -> validate() -> calculate() -> save() -> display()
+
+21) FUNCTION CALLING FLOW
+## 21. Function calling flow
+
+```python
+def multiply(a, b):
+    return a * b
+
+
+result = multiply(5, 4)
 ```
+
+Calling `multiply(5, 4)` passes `5` and `4` to the function. The function returns their product, which is assigned to `result`.
+
+## 22. Functions are objects
+
+Functions are objects in Python, so they can be assigned to variables and called through those variables.
+
+```python
+def greet():
+    print("hello")
+
+
+x = greet
+x()
+```
+
+Here, `x` refers to the function object `greet`.
+
+## 23. Passing a function to another function
+
+```python
+def square(x):
+    return x * x
+
+
+def process(function, value):
+    return function(value)
+
+
+print(process(square, 5))  # 25
+```
+
+Passing a function to another function introduces the idea of higher-order functions.
+
+## 24. Lambda functions
+
+A lambda is an anonymous function expression, often used for small operations.
+
+```python
+square = lambda x: x * x
+print(square(5))  # 25
+```
+
+Example using `map()` to double each number:
+
+```python
+numbers = [1, 2, 3, 4]
+result = list(map(lambda x: x * 2, numbers))
+print(result)  # [2, 4, 6, 8]
+```
+
+## 25. Recursion
+
+A recursive function calls itself. It needs a condition that stops the recursion.
+
+```python
+def countdown(n):
+    if n == 0:
+        return
+    print(n)
+    countdown(n - 1)
+
+
+countdown(5)
+```
+
+## 26. Function documentation
+
+A docstring documents what a function does. It can be accessed using the function's `__doc__` attribute.
+
+```python
+def add(a, b):
+    """Return the sum of two numbers."""
+    return a + b
+
+
+print(add.__doc__)
+```
+
+Writing docstrings is a useful professional Python habit.
+
+## 27. Type hints
+
+Type hints communicate intended types to developers and tools. Python generally does not enforce them automatically at runtime.
+
+```python
+def add(a: int, b: int) -> int:
+    return a + b
+```
+
+## 28. Practical program: smart electricity bill
+
+```python
+def calculate_bill(units):
+    if units <= 100:
+        amount = units * 2
+    elif units <= 200:
+        amount = 100 * 2 + (units - 100) * 4
+    else:
+        amount = 100 * 2 + 100 * 4 + (units - 200) * 6
+
+    return amount + 100
+
+
+units = int(input("Enter units: "))
+bill = calculate_bill(units)
+print("Bill:", bill)
+```
+
+Why create `calculate_bill()` instead of writing everything in the main program?
+
+It provides separation of responsibility, reusability, testability, readability, and maintainability.
+
+## 29. Function design
+
+A good function generally has input, processing, and output.
+
+## 30. Do not create giant functions
+
+Bad function example:
+
+```python
+def student_system():
+    ...
+```
+  #input
+  #validation
+  #calculation
+  # database
+  #printing  
+
+  BETTER 
+  def get_student:
+  def validate_student:
+  def calculate_result:
+  def save_result:
+  def display_result:
+
+  this introducess single responsibilty without making the class ,the function more efficient.
+
+        
+                     
