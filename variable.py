@@ -188,14 +188,42 @@
 # print(add(5,6))
 
 #
-def calculate():
-    return 10
-calculate()
-print("hello")
+# def calculate():
+#     return 10
+# calculate()
+# print("hello")
+
+#function calling another function
+# def add(a, b):
+#     return a + b
 
 
-  
+# def display_result():
+#     result = add(10, 20)
+#     print(result)
 
+
+# display_result()
+
+#Function calling flow
+# def multiply(a, b):
+#     return a * b
+
+# result = multiply(5, 4)
+# print(result)
+
+#Passing a function to another function
+# def square(x):
+#     return x * x
+
+
+# def process(function, value):
+#     return function(value)
+
+
+# print(process(square, 5))  
+squre = lambda x:x*x
+print(squre(5))
 
 
 

@@ -472,5 +472,29 @@ def student_system():
 
   this introducess single responsibilty without making the class ,the function more efficient.
 
+  31) map() Function in Python
+The map() function is a higher-order function used to apply a function to every element of an iterable such as a list, tuple, etc.
+
+Syntax:map(function, iterable)
+Simple Example
+Suppose we want to double every number in a list:
+numbers = [1, 2, 3, 4, 5]
+def double(x):    
+return x * 2result = map(double, numbers)
+print(list(result))
+
+How it works:
+numbers → [1, 2, 3, 4, 5]
+              ↓
+           double()
+              ↓
+result  → [2, 4, 6, 8, 10]
+
+map() takes each value one by one and passes it to double().
+
+
+
+
+
         
                      
