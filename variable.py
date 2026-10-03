@@ -222,9 +222,46 @@
 
 
 # print(process(square, 5))  
-squre = lambda x:x*x
-print(squre(5))
+# squre = lambda x:x*x
+# print(squre(5))
+
+# recursion
+# def countdown(n):
+#     if n == 0:
+#         return
+#     print(n)
+#     countdown(n - 1)
 
 
+# countdown(5)
 
+#function documentation
+# def add(a, b):
+#     """Return the sum of two numbers."""
+#     return a + b
+
+
+# print(add.__doc__)
+
+#type hints
+# def add(a: int, b: int) -> int:
+#     return a + b
+# print(add(5))
+#
+
+#smart electricity bill calculator
+# def calculate_bill(units):
+#     if units <= 100:
+#         amount = units * 2
+#     elif units <= 200:
+#         amount = 100 * 2 + (units - 100) * 4
+#     else:
+#         amount = 100 * 2 + 100 * 4 + (units - 200) * 6
+
+#     return amount + 100
+
+
+# units = int(input("Enter units: "))
+# bill = calculate_bill(units)
+# print("Bill:", bill)
 
