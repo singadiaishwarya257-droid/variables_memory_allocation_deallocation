@@ -1,4 +1,20 @@
-﻿# Python Data Structures — Interview Notes
+﻿## Differences Between List, Tuple, Set and Dictionary
+
+| List | Tuple | Set | Dictionary |
+|---|---|---|---|
+| A non-homogeneous collection that stores elements in a sequence. | A non-homogeneous collection that stores elements in a sequence. | A non-homogeneous collection that stores unique elements. | A non-homogeneous collection that stores data as key-value pairs. |
+| Represented using `[]` | Represented using `()` | Represented using `{}` | Represented using `{key: value}` |
+| Allows duplicate elements | Allows duplicate elements | Does not allow duplicate elements | Does not allow duplicate keys |
+| Can contain nested collections | Can contain nested collections | Can contain hashable elements | Can contain nested collections |
+| Example: `[1, 2, 3, 4, 5]` | Example: `(1, 2, 3, 4, 5)` | Example: `{1, 2, 3, 4, 5}` | Example: `{1: "a", 2: "b", 3: "c"}` |
+| Created using `list()` | Created using `tuple()` | Created using `set()` | Created using `dict()` |
+| Mutable — elements can be changed | Immutable — elements cannot be changed | Mutable — elements can be added or removed | Mutable — key-value pairs can be changed |
+| Ordered | Ordered | Unordered | Insertion-ordered in Python 3.7+ |
+| Empty list: `l = []` | Empty tuple: `t = ()` | Empty set: `s = set()` | Empty dictionary: `d = {}` |
+
+---
+
+# Python Data Structures — Interview Notes
 
 ## 1. Quick Comparison
 
